@@ -10,6 +10,9 @@ def recommend_api():
     recommendations = recommend_logic.get_recommendations()
     return jsonify(recommendations)
 
+print("Registrerte ruter i Flask:")
+print(app.url_map)  # alle registrerte ruter i Flask
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # Render sin PORT eller 10000 som fallback
     app.run(host="0.0.0.0", port=port, debug=True)
