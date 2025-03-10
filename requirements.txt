@@ -1,6 +1,8 @@
 Flask==3.0.0  
-Werkzeug==3.0.1
-pandas==1.5.3
-scikit-learn==1.2.1
-gunicorn==20.1.0
-numpy==1.23.5
+Werkzeug==3.0.1  
+pandas==1.5.3  
+scikit-learn==1.2.1  
+gunicorn==20.1.0  
+numpy==1.23.5  
+fuzzywuzzy==0.18.0  
+python-Levenshtein==0.12.2  
