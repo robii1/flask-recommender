@@ -4,13 +4,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 def get_recommendations():
-    #  movies.csv eksisterer?
     if not os.path.exists("movies.csv"):
-        return [{"error": "movies.csv ikke funnet"}]
-
-    try:
-        # filmdata
-        df = pd.read_csv("movies.csv").fillna("")
+        return [{"error": "movies.csv ikke funnet!"}]
+    
+    df = pd.read_csv("movies.csv").fillna("")
     except Exception as e:
         return [{"error": f"Kunne ikke laste movies.csv: {str(e)}"}]
 
